@@ -75,7 +75,7 @@ setup(
     install_requires=[
         'future',
         'fiona',
-        'gdal', # Required Microsoft Visual C++ Compiler for Python 2.7
+        'gdal>=1.11', # Required Microsoft Visual C++ Compiler for Python 2.7
         'rasterio', # Required Numpy
         # These were included to prevent import errors:
         'geopandas',
