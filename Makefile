@@ -82,6 +82,13 @@ bdist_wheel:
 html:
 	sphinx-build -b html docs build/docs/html
 
+
+.PHONY: html_rtd
+html_rtd:
+	sphinx-build -T -E -b readthedocs -d _build/doctrees-readthedocs -D language=en . _build/html
+
+
+
 .PHONY: latex
 latex:
 	sphinx-build -b latex docs build/docs/latex
