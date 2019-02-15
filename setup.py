@@ -13,7 +13,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='pyprecag',
-    version='0.2.0',
+    version='0.2.1',
     description='A suite of tools for Precision Agriculture',
     long_description=long_description,
 
@@ -76,7 +76,7 @@ setup(
         'future',
         'fiona',
         'gdal', # Required Microsoft Visual C++ Compiler for Python 2.7
-        'rasterio', # Required Numpy
+        'rasterio>1,<=1.0.13', # Required Numpy
         # These were included to prevent import errors:
         'geopandas',
         'unidecode',
