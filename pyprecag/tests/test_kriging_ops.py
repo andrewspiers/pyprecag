@@ -271,6 +271,7 @@ class TestKrigingOps(unittest.TestCase):
             self.assertEqual(('float32',), dataset.dtypes)
             self.assertEqual(rasterio.crs.CRS.from_epsg(28354), dataset.crs, )
 
+    @unittest.skipIf(platform.system() != 'Windows', 'Vesper only present on Windows')
     def test3_prepareForVesperKrig_LowDensity(self):
         file_csv = os.path.realpath(this_dir + '/data/area2_lowdensity_points.csv')
 
